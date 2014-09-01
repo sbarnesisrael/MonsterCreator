@@ -59,6 +59,11 @@ namespace MonsterCreator
             txtPower.Text = rndPower.ToString();
             txtLeadership.Text = rndLeadership.ToString();
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }            
     }
 }
