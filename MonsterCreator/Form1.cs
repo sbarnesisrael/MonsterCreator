@@ -56,14 +56,14 @@ namespace MonsterCreator
             double UPC = double.Parse(txtUPC.Text);
             Random rand = new Random( (int) UPC );
 
-            int rndHP = rand.Next(20);
-            int rndMP = rand.Next(25);
-            int rndAgility = rand.Next(30);
-            int rndDefense = rand.Next(35);
-            int rndGender = rand.Next(40);
-            int rndBreed = rand.Next(45);
-            int rndPower = rand.Next(50);
-            int rndLeadership = rand.Next(55);
+            int rndHP = rand.Next(100);
+            int rndMP = rand.Next(100);
+            int rndAgility = rand.Next(100);
+            int rndDefense = rand.Next(100);
+            int rndGender = rand.Next(100);
+            int rndBreed = rand.Next(110);
+            int rndPower = rand.Next(100);
+            int rndLeadership = rand.Next(100);
 
             if (rndBreed >= 0 && rndBreed < 10)
             {
@@ -101,7 +101,7 @@ namespace MonsterCreator
             {
                 txtBreed.Text = MonstBreed.Light.ToString();
             }
-            else if (rndBreed >= 90)
+            else if (rndBreed >= 90 && rndBreed < 100)
             {
                 txtBreed.Text = MonstBreed.Dark.ToString();
             }
@@ -115,7 +115,6 @@ namespace MonsterCreator
             txtAgility.Text = rndAgility.ToString();
             txtDefense.Text = rndDefense.ToString();
             txtGender.Text = rndGender.ToString();
-            //txtBreed.Text = rndBreed.ToString();
             txtPower.Text = rndPower.ToString();
             txtLeadership.Text = rndLeadership.ToString();
             
